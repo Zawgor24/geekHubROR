@@ -1,4 +1,4 @@
-require_relative 'deleteTrash'
+require_relative 'delete_trash'
 
 class ThirdProblem
 
