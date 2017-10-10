@@ -7,6 +7,8 @@ module DeleteTrash
     "Gussie Daniel V", "Kitty Senger Jr.", "Lexus Gibson", "Kaylah Howell",
     "Maxie Wilderman", "Kayden Mohr", "Devonte Skiles", "Tina Mante", "Heloise Mann"
   ]
+  
+  private
 
   def delete_trash
     trashes = ['Mrs. ', 'Miss ' , 'Mrs. ' , 'Dr. ', ' V', ' Jr.']

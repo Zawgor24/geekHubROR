@@ -1,4 +1,4 @@
-class Main
+class TaskWithNumbers
   @@numbers = [
     "9461055376", "1098029425", "1365826266", "3651652057",
     "6639633927", "9198606875", "3425027805", "9600912575",
@@ -33,7 +33,7 @@ class Main
 
     @@numbers.each do |element|
       nums = element.split('').sort
-      sum_of_digits += [nums[0].to_i,nums[1].to_i,nums[-1].to_i,nums[-2].to_i].sum 
+      sum_of_digits += [nums[0].to_i, nums[1].to_i, nums[-1].to_i, nums[-2].to_i].sum 
     end
 
     puts sum_of_digits

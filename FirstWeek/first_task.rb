@@ -1,6 +1,6 @@
 require_relative 'delete_trash'
 
-class FirstProblem
+class FirstTask
 
   include DeleteTrash
 
@@ -22,4 +22,4 @@ class FirstProblem
   end
 end
 
-FirstProblem.new.call
+FirstTask.new.call
