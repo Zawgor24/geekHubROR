@@ -1,7 +1,7 @@
 require_relative 'delete_trash'
 
+# The second task
 class SecondTask
-
   include DeleteTrash
 
   def call
@@ -11,11 +11,9 @@ class SecondTask
 
   def hash_of_names
     names_in_hash = {}
-    splited_names = []
 
-    @@names.each do |name|
-      splited_names = name.split
-      names_in_hash[splited_names[0][0]] = splited_names[1][1]
+    @@names.map! do |name|
+      names_in_hash[name[0]] = name.split[1][1]
     end
 
     puts names_in_hash

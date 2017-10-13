@@ -1,7 +1,7 @@
 require_relative 'delete_trash'
 
+# The first task
 class ThirdTask
-
   include DeleteTrash
 
   def call
@@ -10,14 +10,12 @@ class ThirdTask
   end
 
   def array_of_letters
-    splited_names = []
     letters = []
 
-    @@names.each do |name|
-      splited_names = name.split
-      letters.push(splited_names[0][0], splited_names[1][0])
+    @@names.map! do |name|
+      letters.push(name[0][0], name.split[1][0])
     end
-    
+
     uniq_sorted_letters = letters.uniq.sort
     print uniq_sorted_letters
   end

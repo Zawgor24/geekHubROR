@@ -1,7 +1,7 @@
 require_relative 'delete_trash'
 
+# The fourth task1
 class FourthTask
-
   include DeleteTrash
 
   def call
@@ -10,11 +10,8 @@ class FourthTask
   end
 
   def replace_names
-    splited_names = []
-
-    @@names.each do |name|
-      splited_names = name.split.reverse.join(' ')
-      puts splited_names
+    @@names.map! do |name|
+      puts name.split.reverse.join(' ')
     end
   end
 end

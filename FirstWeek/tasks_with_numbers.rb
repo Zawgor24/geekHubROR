@@ -1,13 +1,14 @@
+# Task with numbers
 class TaskWithNumbers
-  @@numbers = [
-    "9461055376", "1098029425", "1365826266", "3651652057",
-    "6639633927", "9198606875", "3425027805", "9600912575",
-    "8826860435", "4244213108", "8930423446", "6975487430",
-    "2956968315", "4024720801", "8882048673", "4897211695",
-    "6089600553", "4272319905", "4517433227", "5565635133"
+  @@numbers = %w[
+    9461055376 1098029425 1365826266 3651652057
+    6639633927 9198606875 3425027805 9600912575
+    8826860435 4244213108 8930423446 6975487430
+    2956968315 4024720801 8882048673 4897211695
+    6089600553 4272319905 4517433227 5565635133
   ]
 
-  def numbers_in_hash #First task
+  def numbers_in_hash # First task
     nums = {}
 
     @@numbers.each do |element|
@@ -17,7 +18,7 @@ class TaskWithNumbers
     puts nums
   end
 
-  def numbers_in_string #Second task
+  def numbers_in_string # Second task
     max_min_digits = ''
 
     @@numbers.each do |element|
@@ -27,13 +28,14 @@ class TaskWithNumbers
     print max_min_digits
   end
 
-  def sum_of_numbers #Third task
+  def sum_of_numbers # Third task
     sum_of_digits = 0
-    nums = [] 
 
-    @@numbers.each do |element|
-      nums = element.split('').sort
-      sum_of_digits += [nums[0].to_i, nums[1].to_i, nums[-1].to_i, nums[-2].to_i].sum 
+    @@numbers.map! do |elem|
+      element.split('').sort
+      sum_of_digits += [
+        elem[0].to_i, elem[1].to_i, elem[-1].to_i, elem[-2].to_i
+      ].sum
     end
 
     puts sum_of_digits

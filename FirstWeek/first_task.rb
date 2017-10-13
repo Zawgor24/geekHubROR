@@ -1,7 +1,7 @@
 require_relative 'delete_trash'
 
+# The first task
 class FirstTask
-
   include DeleteTrash
 
   def call
