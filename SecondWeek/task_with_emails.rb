@@ -34,21 +34,21 @@ class TaskWithEmail
   end
 
   def users_over_19 # Second task
-    @@users.map { |user| user if user[1][1] > 19 }.compact
+    puts(@@users.select { |_key, value| value[1] > 19 })
   end
 
   def sorte_users_by_name # Third task
-    @@users.sort_by { |_key, value| value }
+    puts @@users.sort_by { |_key, value| value[0] }.to_h
   end
 
   def email_domains # Fourth task
-    @@emails.map { |email| email.split('@')[1] }
+    p(@@emails.map { |email| email.split('@')[1] })
   end
 end
 
 TaskWithEmail.new.create_users
-p TaskWithEmail.new.users_over_19
+TaskWithEmail.new.users_over_19
 puts
-p TaskWithEmail.new.sorte_users_by_name
+TaskWithEmail.new.sorte_users_by_name
 puts
-p TaskWithEmail.new.email_domains
+TaskWithEmail.new.email_domains

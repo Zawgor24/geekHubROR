@@ -3,7 +3,7 @@ require 'csv'
 # The ExportCSV module, add users to csv file in 2 ways
 module ExportCSV
   def to_csv
-    CSV.open("#{@name}.csv", 'a+') do |csv|
+    CSV.open("#{@name}.csv", 'wb') do |csv|
       csv << %w[Name Age Email]
       csv << [@name, @age, @email]
     end
@@ -18,7 +18,7 @@ module ExportCSV
     def users_csv
       users = class_variable_get(:@@users)
 
-      CSV.open('users.csv', 'a+') do |csv|
+      CSV.open('users.csv', 'wb') do |csv|
         csv << %w[Name Age Email]
         users.each do |user|
           csv << [user.name, user.age, user.email]

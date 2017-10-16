@@ -22,10 +22,10 @@ class User
     @@users.delete(self)
   end
 
-  def update_user(name: @name, age: @age, email: @email)
-    @name = name if name
-    @age = age if age
-    @email = email if email
+  def update_user(options = {})
+    @name = options[:name] if options[:name]
+    @age = options[:age] if options[:age]
+    @email = options[:email] if options[:email]
   end
 
   def to_s
