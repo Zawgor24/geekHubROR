@@ -25,5 +25,16 @@ module ExportCSV
         end
       end
     end
+
+    def posts_csv
+      posts = class_variable_get(:@@posts)
+
+      CSV.open('posts.csv', 'wb') do |csv|
+        csv << %w[Title Body Owner]
+        posts.each do |post|
+          csv << [post.title, post.body, post.owner_email]
+        end
+      end
+    end
   end
 end

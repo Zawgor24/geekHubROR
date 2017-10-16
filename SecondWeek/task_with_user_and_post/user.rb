@@ -15,7 +15,7 @@ class User
   end
 
   def add_user
-    @@users.push(self)
+    @@users << (self)
   end
 
   def remove_user
