@@ -1,0 +1,13 @@
+<h1>All users</h1>
+
+<p><%= link_to 'Create new user', new_user_path %></p>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <%= render @users %>
+</table>

@@ -1,0 +1,12 @@
+<h1>All cats</h1>
+
+<p><%= link_to 'Create new Cat', new_cat_path %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+  <%= render @cats %>
+</table>

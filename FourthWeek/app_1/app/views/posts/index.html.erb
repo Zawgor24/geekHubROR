@@ -1,0 +1,15 @@
+<h1>All Posts</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+
+  <%= render @posts %>
+</table>
+
+<p>
+  <%= link_to 'Create new post', new_post_path %>
+</p>

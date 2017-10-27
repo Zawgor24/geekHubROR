@@ -1,0 +1,15 @@
+<h1>All Articles</h1>
+
+<p>
+  <%= link_to 'Create article', new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <%= render @articles %>
+</table>
