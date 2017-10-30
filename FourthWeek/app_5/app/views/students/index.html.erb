@@ -1,0 +1,12 @@
+<h1>All students</h1>
+
+<p><%= link_to 'Create new student', new_student_path %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Course</th>
+  </tr>
+
+  <%= render @students %>
+</table>

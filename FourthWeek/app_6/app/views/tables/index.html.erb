@@ -1,0 +1,12 @@
+<h1>All tables</h1>
+
+<h3><%= link_to 'Create new table', new_table_path %></h3>
+
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Amount</th>
+  </tr>
+
+  <%= render @tables %>
+</table>

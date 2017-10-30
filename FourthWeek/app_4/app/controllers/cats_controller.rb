@@ -1,5 +1,6 @@
 class CatsController < ApplicationController
   before_action :current_cat, only: [:show, :update, :edit, :destroy] 
+  
   def index
     @cats = Cat.all
   end

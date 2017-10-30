@@ -1,0 +1,36 @@
+<%= form_for @homework do |f| %>
+  <% if @homework.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@homework.errors.count, "error") %> prohibited
+        this homework from being saved:
+      </h2>
+      <ul>
+        <% @homework.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :student %>
+    <%= f.text_field :student %>
+  </p>
+
+  <p>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </p>
+
+  <p>
+    <%= f.label :mark %>
+    <%= f.number_field :mark %>
+  </p>
+
+  <p>
+    <%= 'Rewiev' %>
+    <%= f.text_field :mistake %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

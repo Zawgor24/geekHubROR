@@ -1,0 +1,11 @@
+<tr>
+  <td><%= sportsman.id %></td>
+  <td><%= sportsman.name %></td>
+  <td><%= sportsman.sport %></td>
+  <td><%= sportsman.rank %></td>
+  <td><%= link_to 'Show', sportsman %></td>
+  <td><%= link_to 'Edit', edit_sportsman_path(sportsman) %></td>
+  <td><%= link_to 'Delete', sportsman,
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %></td>
+</tr>

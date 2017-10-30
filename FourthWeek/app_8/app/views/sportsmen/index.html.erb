@@ -1,0 +1,14 @@
+<h1 align="center">Information about all sportsmen</h1>
+
+<h3 align="center"><%= link_to 'Create new sportsman', new_sportsman_path %></h3>
+
+<table align="center">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Sport</th>
+    <th>Rank</th>
+  </tr>
+
+  <%= render @sportsmen %>
+</table>
