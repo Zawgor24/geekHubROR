@@ -12,25 +12,25 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :student %>
-    <%= f.text_field :student %>
-  </p>
 
-  <p>
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
-  </p>
-
-  <p>
-    <%= f.label :mark %>
-    <%= f.number_field :mark %>
-  </p>
-
-  <p>
-    <%= 'Rewiev' %>
-    <%= f.text_field :mistake %>
-  </p>
-
-  <%= f.submit %>
+  <table class="table-primary" align="center">
+  <thead>
+    <tr align="center">
+      <th scope="col">Student</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Mark</th>
+      <th scope="col">Review</th>
+      <th scope="col">Submit</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+        <td><%= f.text_field :student %></td>
+        <td><%= f.text_field :subject %></td>
+        <td><%= f.number_field :mark %></td>
+        <td><%= f.text_field :mistake %></td>
+        <td><%= f.submit %></td>
+      </tr>
+    </tbody>
+  </table>
 <% end %>
