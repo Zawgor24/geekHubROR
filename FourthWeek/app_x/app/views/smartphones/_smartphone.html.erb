@@ -1,0 +1,10 @@
+<tr>
+  <td><%= smartphone.model %></td>
+  <td><%= smartphone.price %></td>
+  <td><%= smartphone.characteristic %></td>
+  <td><%= link_to 'Show', smartphone %></td>
+  <td><%= link_to 'Edit', edit_smartphone_path(smartphone) %></td>
+  <td><%= link_to 'Destroy', smartphone,
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %></td>
+</tr>

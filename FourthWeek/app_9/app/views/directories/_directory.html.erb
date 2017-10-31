@@ -1,0 +1,11 @@
+<tr>
+  <td><%= directory.id %></td>
+  <td><%= directory.name %></td>
+  <td><%= directory.address %></td>
+  <td><%= directory.phone_number %></td>
+  <td><%= link_to 'Show', directory %></td>
+  <td><%= link_to 'Edit', edit_directory_path(directory) %></td>
+  <td><%= link_to 'Delete', directory,
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %></td>
+</tr>

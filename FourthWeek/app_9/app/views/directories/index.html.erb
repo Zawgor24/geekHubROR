@@ -1,0 +1,14 @@
+<h1 align="center">Directory of residents</h1>
+
+<%= link_to 'Create info about new resident', new_directory_path %>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone number</th>
+  </tr>
+
+  <%= render @directories %>
+</table>

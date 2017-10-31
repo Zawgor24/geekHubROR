@@ -1,0 +1,32 @@
+<%= form_for @smartphone do |f| %>
+  <% if @smartphone.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@smartphone.errors.count, "error") %> prohibited
+        this smartphone from being saved:
+      </h2>
+      <ul>
+        <% @smartphone.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </p>
+  
+  <p>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </p>
+
+  <p>
+    <%= f.label :characteristic %>
+    <%= f.text_field :characteristic %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

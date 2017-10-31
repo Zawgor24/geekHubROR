@@ -1,0 +1,13 @@
+<h1>All smartphones</h1>
+
+<p><%= link_to 'Create new smartphone', new_smartphone_path %></p>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Characteristic</th>
+    <th>Price</th>
+  </tr>
+
+  <%= render @smartphones %>
+</table>
