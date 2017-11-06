@@ -1,0 +1,11 @@
+<tbody>
+  <tr>
+    <td><%= flight.name %></td>
+    <td><%= flight.departure_at.strftime('%Y/%B/%d  %k:%M') %></td>
+    <td><%= flight.arrival_at.strftime('%Y/%B/%d  %k:%M')%></td>
+    <td><%= flight.city.country.name %></td>
+    <td><%= flight.city.name %></td>
+    <td><%= link_to 'Get a ticket', new_flight_ticket_path(flight, @ticket) %></td>
+    <td><%= link_to 'Show ', flight_tickets_path(flight) %></td>
+  </tr>
+</tbody>

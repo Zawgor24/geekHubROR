@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  departure_at: 2017-11-02 19:42:07
+  arrival_at: 2017-11-02 19:42:07
+  city: one
+  plane: one
+
+two:
+  name: MyString
+  departure_at: 2017-11-02 19:42:07
+  arrival_at: 2017-11-02 19:42:07
+  city: two
+  plane: two
