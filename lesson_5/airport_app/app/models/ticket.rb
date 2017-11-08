@@ -5,5 +5,5 @@ class Ticket < ApplicationRecord
 
   validates :place, presence: true
   validates :place, numericality: {greater_than: 0}
-
+  
 end
