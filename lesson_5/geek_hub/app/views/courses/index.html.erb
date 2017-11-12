@@ -1,0 +1,22 @@
+<div class="p-3 mb-2 bg-dark text-white" >
+  <h5 class= "p-3 mb-2 bg-dark text-white" align="right">
+    <% if current_user %>
+      Logged in as <%= current_user.email %>||
+      <%= link_to 'Log out', destroy_user_session_path,
+                              method: :delete %>
+    <% else %>
+      <%= link_to 'Sing up', new_user_registration_path %>||
+      <%= link_to 'Log in', user_session_path %>
+    <% end %>
+  </h5>
+  <h1 >All courses</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+
+    <%= render @courses %>
+  </table>
+  <%= will_paginate @courses %>
+  <%= link_to 'Create new course', new_course_path %>
+</div>

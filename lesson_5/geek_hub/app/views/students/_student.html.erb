@@ -1,0 +1,10 @@
+<tr>
+  <td><%= student.id %></td>
+  <td><%= student.name %></td>
+  <td><%= student.email%></td>
+  <td>
+    <%= link_to 'Info', student %>||
+    <%= link_to 'Project', student_projects_path(student) %>||
+    <%= link_to 'Homeworks', course_homeworks_path(@course) %>
+  </td>
+</tr>

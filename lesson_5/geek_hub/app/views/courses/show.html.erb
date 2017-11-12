@@ -1,0 +1,19 @@
+<div class="p-3 mb-2 bg-dark text-white">
+  <h1>'<%= @course.name %>' course page</h1>
+
+  <% if @course.image.present? %>
+    <%= image_tag(@course.image_url(:thumb)) %>
+  <% end %>
+
+  <ul>
+    <li><%= link_to 'Students of this course', course_students_path(@course) %></li>
+    <li><%= link_to 'Create new student', new_course_student_path(@course) %></li>
+    <li><%= link_to 'Create new homework', new_course_homework_path(@course) %></li>
+    <li><%= link_to 'Homeworks', course_homeworks_path(@course) %></li>
+    <li><%= link_to 'Update this course', edit_course_path(@course) %></li>
+    <li><%= link_to 'Delete this course', @course,
+                                          method: :delete,
+                                          data: {confirm: 'Shure?'} %></li>
+    <li><%= link_to 'Back to courses', root_path %></li>
+  </ul>
+</div>

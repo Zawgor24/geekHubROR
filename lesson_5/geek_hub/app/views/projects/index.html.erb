@@ -1,0 +1,19 @@
+<h1>All projects of '<%= @student.name %>' student</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Task</th>
+    <th>Deadline</th>
+  </tr>
+
+  <% @student.projects.each do |project| %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.task %></td>
+      <td><%= project.deadline %></td> 
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @projects %>
+<%= link_to 'Back to courses', root_path %>

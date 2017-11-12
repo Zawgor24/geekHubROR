@@ -1,0 +1,19 @@
+<h1>Whole information about <%= @student.name %></h1>
+
+<% if @student.image.present? %>
+  <%= image_tag(@student.image_url(:thumb)) %>
+<% end %>
+
+<h3>Student courses:
+<% @student.courses.each do |course| %>
+  <%= course.name %>/
+<% end %>
+</h3>
+
+<h3>Name: <%= @student.name %></h3>
+<h3>Email: <%= @student.email %></h3>
+<%= link_to 'Delete', @student,
+                      method: :delete,
+                      data: {confirm: 'Shure?'} %>
+<%= link_to 'Create new Project', new_student_project_path(@student) %>
+<%= link_to 'Back to courses', root_path %>

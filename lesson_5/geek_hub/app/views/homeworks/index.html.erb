@@ -1,0 +1,16 @@
+<h1 align="center" class="p-3 mb-2 bg-dark text-white">
+  All homeworks of '<%= @course.name %>' course
+</h1>
+
+<table class="table table-striped table-dark">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Task</th>
+    <th scope="col">Deadline</th>
+  </tr>
+  <%= render @homeworks %>
+</table>
+<div class="p-3 mb-2 bg-dark text-white">
+  <%= will_paginate @homeworks %>
+  <%= link_to 'Back to courses', root_path %>
+</div>
