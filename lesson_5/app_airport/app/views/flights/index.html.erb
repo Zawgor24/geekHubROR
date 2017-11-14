@@ -1,0 +1,19 @@
+<h1>All flights</h1>
+
+<table>
+  <tr>
+    <th>Tickets info</th>
+    <th>Flight</th>
+    <th>Departure at</th>
+    <th>Arrival at</th>
+    <th>City</th>
+    <th>Plane</th>
+  </tr>
+
+  <%= render @flights %>
+</table>
+
+<%= will_paginate @flights %>
+
+<%= link_to 'New flight', new_plane_flight_path(@plane) %>
+<%= link_to 'Back to planes', root_path %>

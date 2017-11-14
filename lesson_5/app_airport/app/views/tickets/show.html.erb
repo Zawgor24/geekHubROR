@@ -1,0 +1,13 @@
+<h1>Ticket info</h1>
+
+<h3>
+  <p>Flight name: <%= @ticket.flight.name %></p>
+  <p>Place № <%= @ticket.place %></p>
+  <p>Place type <%= @ticket.place_type %></p>
+  <p>Flight departure: <%= @ticket.flight.departure_at %></p>
+  <p>Flight arrival: <%= @ticket.flight.arrival_at %></p>
+  <p>Flight arrival city: <%= @ticket.flight.plane.city.name %></p>
+  <p>Plane's model: <%= @ticket.flight.plane.name %></p>
+</h3>
+
+<%= link_to 'Back to flights', plane_flights_path(@ticket.flight.plane) %>

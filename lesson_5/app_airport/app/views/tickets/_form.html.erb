@@ -1,0 +1,24 @@
+<%= form_for [@flight, @ticket] do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@ticket.errors.count, "error") %> prohibited
+        this ticket from being saved:
+      </h2>
+      <ul>
+        <% @ticket.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<tr>
+  <td><%= f.number_field :place %></td>
+  <td>
+    <%= f.select :place_type, Ticket.place_types.keys %>
+  </td>
+  <td><%= current_user.email %></td>
+  <td><%= f.submit %></td>
+</tr>
+
+<% end %>

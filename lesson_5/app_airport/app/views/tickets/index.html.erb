@@ -1,0 +1,15 @@
+<h1>All <%= @flight.name %> flight tickets </h1>
+
+<table>
+  <tr>
+    <th>Place №</th>
+    <th>Place type</th>
+    <th>Passenger</th>
+  </tr>
+
+  <%= render @tickets %>
+</table>
+
+<%= will_paginate @tickets %>
+<%= link_to 'New ticket', new_flight_ticket_path(@flight) %>
+<%= link_to 'Back to flights', plane_flights_path(@flight.plane) %>

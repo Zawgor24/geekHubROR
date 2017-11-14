@@ -1,0 +1,11 @@
+<h1>Info about <%= @flight.name %> flight</h1>
+
+<h3>
+  <p>Flight name: <%= @flight.name %></p>
+  <p>Flight departure: <%= @flight.departure_at %></p>
+  <p>Flight arrival: <%= @flight.arrival_at %></p>
+  <p>Flight arrival city: <%= @flight.plane.city.name %></p>
+  <p>Plane's model: <%= @flight.plane.name %></p>
+</h3>
+
+<%= link_to 'Back to flights', plane_flights_path(@flight.plane) %>

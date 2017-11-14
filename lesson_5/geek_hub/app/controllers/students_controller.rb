@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+  class StudentsController < ApplicationController
   before_action :current_student, only: [:show, :edit, :update, :destroy]
   before_action :current_course, only: [:create, :index, :new]
   

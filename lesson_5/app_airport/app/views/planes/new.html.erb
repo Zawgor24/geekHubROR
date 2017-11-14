@@ -1,0 +1,18 @@
+<%= form_for [@city,@plane] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </p>
+
+  <p>
+    <%= f.label :places %>
+    <%= f.number_field :places%>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

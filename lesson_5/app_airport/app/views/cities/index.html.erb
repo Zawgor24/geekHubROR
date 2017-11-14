@@ -1,0 +1,13 @@
+<h1>All airport directions</h1>
+
+</div>
+<% @cities.each do |city| %>
+  <li>
+    <ul>
+      <%= link_to city.name + '(' + city.country.name + ')',
+      city_planes_path(city) %>  
+    </ul>
+  </li>
+<% end %>
+
+<%= will_paginate @cities %>

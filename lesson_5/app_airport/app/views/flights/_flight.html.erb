@@ -1,0 +1,17 @@
+<tr>
+  <td>
+    <%= link_to 'Buy ticket', new_flight_ticket_path(flight) %>
+    <%= link_to 'Show all tickets', flight_tickets_path(flight) %>
+  </td>
+  <td><%= flight.name %></td>
+  <td><%= flight.departure_at.strftime('%Y/%B/%d  %k:%M') %></td>
+  <td><%= flight.arrival_at.strftime('%Y/%B/%d  %k:%M') %></td>
+  <td><%= @plane.city.name %></td>
+  <td><%= flight.plane.name %></td>
+  <td><%= link_to 'Show info', flight %></td>
+  <td><%= link_to 'Update', edit_flight_path(flight) %></td>
+  <td><%= link_to 'Delete', flight,
+                            method: :delete,
+                            data: { confirm: 'Sure?' } %></td>
+
+</tr>

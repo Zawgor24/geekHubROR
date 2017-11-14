@@ -1,0 +1,8 @@
+<h3>
+  <p>Model: <%= @plane.name %></p>
+  <p>Places: <%= @plane.places %></p>
+</h3>
+<% if @plane.image.present? %>
+    <%= image_tag(@plane.image_url(:thumb)) %>
+<% end %>
+

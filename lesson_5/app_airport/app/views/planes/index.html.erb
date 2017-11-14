@@ -1,0 +1,13 @@
+<h1>All accept plains to <%= @city.name %></h1>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Places</th>
+  </tr>
+  
+<%= render @planes %>
+</table>
+
+<%= will_paginate @planes %>
+<%= link_to 'New plane', new_city_plane_path(@city) %>
