@@ -1,0 +1,18 @@
+<tr>
+  <td><%= student.id %></td>
+  <td><%= student.name %></td>
+  <td><%= student.email %></td>
+  <td><% student.courses.each do |course| %>
+        <%= course.name %>
+      <% end %></td>
+  <td><% student.projects.each do |project| %>
+        <%= project.name %>|
+      <% end %></td>
+  <td>||<%= student.created_at %></td>
+  <td>||<%= student.image? %></td>
+  <td><%= link_to 'Update info', edit_admin_student_path(student) %></td>
+  <td><%= link_to 'Show info', admin_student_path(student) %></td>
+  <td><%= link_to 'Delete student', admin_student_path(student),
+                                    method: :delete,
+                                    data: {confirm: 'Sure?'} %></td>
+</tr>

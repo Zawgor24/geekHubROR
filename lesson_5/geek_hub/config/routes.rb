@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     end
     resources :homeworks
   end
+
+  get '/admin' => 'admin/students#index'
+  namespace :admin do
+    resources :students
+  end 
   
   root 'courses#index'
 end

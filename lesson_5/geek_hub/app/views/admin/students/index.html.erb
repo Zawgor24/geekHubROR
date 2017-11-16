@@ -1,0 +1,17 @@
+<h1>All students</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Courses</th>
+    <th>Projects</th>
+    <th>Created at</th>
+    <th>Image</th>
+  </tr>
+
+  <%= render @students %>
+</table>
+
+<%= will_paginate @students %>
