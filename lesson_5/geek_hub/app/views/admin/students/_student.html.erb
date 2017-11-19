@@ -8,7 +8,7 @@
   <td><% student.projects.each do |project| %>
         <%= project.name %>|
       <% end %></td>
-  <td>||<%= student.created_at %></td>
+  <td>||<%= student.created_at.strftime('%Y/%B/%d  %k:%M') %></td>
   <td>||<%= student.image? %></td>
   <td><%= link_to 'Update info', edit_admin_student_path(student) %></td>
   <td><%= link_to 'Show info', admin_student_path(student) %></td>

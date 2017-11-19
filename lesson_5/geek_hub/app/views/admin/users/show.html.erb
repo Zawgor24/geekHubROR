@@ -1,0 +1,9 @@
+<h1><%= @user.email %> info</h1>
+
+<h3>
+  Email: <%= @user.email %><br>
+  Password: <%= @user.password %><br>
+  Admin: <%= @user.admin %><br>
+</h3>
+
+<%= link_to 'Back to users', admin_users_path %>

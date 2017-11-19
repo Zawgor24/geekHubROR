@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     resources :homeworks
   end
 
-  get '/admin' => 'admin/students#index'
+  get '/admin' => 'admin/welcome#index'
   namespace :admin do
+    resources :users
     resources :students
   end 
   

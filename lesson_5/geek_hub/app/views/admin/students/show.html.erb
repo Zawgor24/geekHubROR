@@ -10,9 +10,16 @@
 <% end %>
 </h3>
 
-<h3>Name: <%= @student.name %></h3>
-<h3>Email: <%= @student.email %></h3>
+<h3>
+  Name: <%= @student.name %><br>
+  Email: <%= @student.email %><br>
+  Projects: 
+  <% @student.projects.each do |project| %>
+    <%= project.name %>/
+  <% end %><br>
+</h3>
+
 <%= link_to 'Delete', @student,
                       method: :delete,
-                      data: {confirm: 'Shure?'} %>
+                      data: {confirm: 'Shure?'} %>||
 <%= link_to 'Back to students', admin_students_path %>
