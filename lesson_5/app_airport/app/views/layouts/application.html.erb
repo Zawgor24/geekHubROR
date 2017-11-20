@@ -9,9 +9,9 @@
   </head>
 
   <body>
-  <div align="right">
+  <div align="right" class="p-3 mb-2 bg-dark text-white" >
     <%= render user_signed_in? ? 'layouts/logged' : 'layouts/unlogged' %>
   </div>
-    <%= yield %>
+    <div class="p-3 mb-2 bg-dark text-white"><%= yield %></div>
   </body>
 </html>

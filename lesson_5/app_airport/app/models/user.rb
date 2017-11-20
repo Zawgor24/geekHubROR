@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :flight, foreign_key: true, required: false, dependent: :delete
-  has_many :tickets
+  belongs_to :flight, foreign_key: true
+  has_many :tickets, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 end

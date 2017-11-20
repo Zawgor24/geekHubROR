@@ -13,13 +13,14 @@
 <h3>
   Name: <%= @student.name %><br>
   Email: <%= @student.email %><br>
+
   Projects: 
   <% @student.projects.each do |project| %>
     <%= project.name %>/
   <% end %><br>
 </h3>
 
-<%= link_to 'Delete', @student,
+<%= link_to 'Delete', admin_student_path(@student),
                       method: :delete,
                       data: {confirm: 'Shure?'} %>||
 <%= link_to 'Back to students', admin_students_path %>

@@ -1,7 +1,7 @@
 class Admin::UsersController < Admin::ApplicationController
   before_action :current_user, only: %i[show edit update destroy]
   def index
-    @users = User.paginate(page: params[:page], per_page: 5)
+    @users = User.paginate(page: params[:page], per_page: 7)
   end
 
   def new
@@ -9,9 +9,9 @@ class Admin::UsersController < Admin::ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
-    if @user.save
+    if @user.save!
       redirect_to admin_user_path(@user)
     else
       render :new

@@ -11,5 +11,7 @@
   <%= render @users %>
 </table>
 
+<%= will_paginate @users %>
+
 <%= link_to 'Create new user', new_admin_user_path %><br>
 <%= link_to 'Back', admin_path %>

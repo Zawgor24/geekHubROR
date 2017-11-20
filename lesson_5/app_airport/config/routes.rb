@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
 
   resources :cities, only: [:index]do
@@ -8,8 +10,6 @@ Rails.application.routes.draw do
       end
     end
   end
-  
-
 
   root 'cities#index'
 end

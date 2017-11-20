@@ -1,6 +1,6 @@
 class Plane < ApplicationRecord
-  has_many :flights
-  belongs_to :city, dependent: :delete
+  has_many :flights, dependent: :destroy
+  belongs_to :city
 
   validates :name, :places, presence: true
 

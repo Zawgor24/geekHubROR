@@ -9,3 +9,4 @@ la = City.create(name: 'LA', country: usa)
 toronto = City.create(name: 'Toronto', country: canada)
 ufa = City.create(name: 'Ufa', country: russia)
 kiev = City.create(name: 'Kiev', country: ukraine)
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
