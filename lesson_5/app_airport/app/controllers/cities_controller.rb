@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
   def index
-    @cities = City.paginate(page: params[:page], per_page: 3)
+    @cities = City.paginate(page: params[:page], per_page: 5)
   end
 end

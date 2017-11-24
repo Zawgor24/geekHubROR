@@ -12,7 +12,7 @@ class Admin::StudentsController < Admin::ApplicationController
       render :edit
     end
   end
-
+  
   def destroy
     @student.destroy
 

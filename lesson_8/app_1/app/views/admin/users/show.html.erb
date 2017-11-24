@@ -1,0 +1,10 @@
+<h1><%= @user.email %> info</h1>
+
+<h3>
+  Email: <%= @user.email %><br>
+  Created at: <%= @user.created_at %><br>
+  <%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %><br>
+  <%= 'This uses has acces to admin' if @user.admin? %>
+</h3>
+
+<%= link_to "Back", :back %>

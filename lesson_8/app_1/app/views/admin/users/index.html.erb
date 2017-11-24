@@ -1,0 +1,15 @@
+<h2>All users</h2>
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th scope="row">Id</th>
+      <th scope="row">Email</th>
+      <th scope="row">Admin</th>
+      <th scope="row">Image</th>
+    </tr>
+  </thead>
+  <tbody><%= render @users %></tbody>
+</table>
+
+<%= will_paginate @users %>

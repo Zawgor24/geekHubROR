@@ -1,6 +1,7 @@
 class FlightsController < ApplicationController
   before_action :current_flight, only: %i[show edit update destroy]
   before_action :current_plane, only: %i[new create index]
+
   def index
     @flights = @plane.flights.paginate(page: params[:page], per_page: 2)
   end

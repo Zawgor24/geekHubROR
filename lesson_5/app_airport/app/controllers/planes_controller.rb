@@ -1,6 +1,7 @@
 class PlanesController < ApplicationController
   before_action :current_city, only: %i[create new index]
   before_action :current_plane, only: %i[show]
+  
   def index
     @planes = @city.planes.paginate(page: params[:page], per_page: 2)
   end

@@ -1,0 +1,10 @@
+<div class="p-3 mb-2 bg-light text-dark">
+  <h3>
+    Email: <%= @user.email %><br>
+    Created at: <%= @user.created_at %><br>
+    <%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %><br>
+    <%= 'This uses has acces to admin' if @user.admin? %><br>
+  </h3>
+</div>
+<%= link_to'Edit info', edit_user_path(@user) %>||
+<%= link_to 'Back', :back %>
