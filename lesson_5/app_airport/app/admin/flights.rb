@@ -2,7 +2,7 @@ ActiveAdmin.register Flight do
   permit_params :name, :departure_at, :arrival_at, :plane_id
 
   show do
-    h2 "Flight: #{flight.name}"  + "sadd"
+    h2 "Flight: #{flight.name}"
     h2 "Departure time: #{flight.departure_at}"
     h2 "Arrival time: #{flight.arrival_at}"
     h2 "Plane model: #{flight.plane.name}"
