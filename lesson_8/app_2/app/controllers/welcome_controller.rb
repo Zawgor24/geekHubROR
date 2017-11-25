@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @teams = Team.all
-    
+    @teams = Team.order('victory DESC')
   end
 end
