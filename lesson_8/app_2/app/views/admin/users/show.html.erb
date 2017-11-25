@@ -1,0 +1,9 @@
+<h2>Show info of <%= @user.email %></h2>
+
+<div class="show">
+  <h3>
+    <p>Email: <%= @user.email %></p>
+    <p>Image: <%= @user.avatar.present? ? image_tag(@user.avatar_url(:thumb)) : 'Empty' %></p>
+    <p><%= @user.admin? ? 'User is an admin' : "User isn't an admin" %></p>
+  </h3>
+</div>

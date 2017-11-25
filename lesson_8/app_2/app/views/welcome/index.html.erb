@@ -1,0 +1,29 @@
+<div class="index">
+  <%= link_to 'Show all information', 'https://www.myscore.com.ua/standings/bwgTBOAd/nJXsGvqj/#table;overall' %>
+
+  <table class="table table-striped table-dark">
+    <thead class="table-inverse">
+      <tr>
+        <th>Place</th>
+        <th>West conferense</th>
+        <th>Games</th>
+        <th>Victory</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% place = 0 %>
+      <% @teams.each do |team| %>
+        <tr>
+        <% if place < 8 %>
+          <td class="bg-primary"><%= place += 1 %></td>
+        <% else %>
+          <td class="bg-warning"><%= place += 1 %></td>
+        <% end %>      
+          <td><%= team.name %></td>
+          <td><%= team.games %></td>
+          <td><%= team.victory %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
