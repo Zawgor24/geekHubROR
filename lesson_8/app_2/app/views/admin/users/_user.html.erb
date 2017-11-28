@@ -3,15 +3,6 @@
   <td><%= user.email %></td>
   <td><%= user.admin? ? 'Admin' : 'Not an admin' %></td>
   <td><%= user.avatar.present? ? image_tag(user.avatar_url(:thumb)) : 'No avatar'%></td>
-  <td>
-    <% if user.admin? %>
-      <%= link_to 'Make user', admin_user_path(user, user: { admin: false }),
-                                                method: :patch, remote: true %>
-      <% else %>
-      <%= link_to 'Make admin', admin_user_path(user, user: { admin: true }),
-                                                method: :patch, remote: true %>
-    <% end %>
-  </td>
   <td><%= link_to 'Show', admin_user_path(user) %></td>
   <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
   <td><%= link_to 'Delete', admin_user_path(user),
