@@ -1,0 +1,17 @@
+<%= form_for [current_user, @player] do |f| %>
+  <p><%= "Name: #{current_user.name} #{current_user.second_name}" %></p>
+
+  <p>
+    <%= f.number_field :rating, placeholder: 'Rating' %>
+  </p>
+  
+  <p>
+    <%= f.number_field :age, placeholder: 'Age' %>
+  </p>
+
+  <p>
+    <%= f.text_field :country, placeholder: 'Country' %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

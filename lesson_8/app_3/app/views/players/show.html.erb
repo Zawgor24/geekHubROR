@@ -1,0 +1,9 @@
+<h2>Show info about <%= @player.name + ' ' + @player.second_name %> player</h2>
+
+<h3>
+  <p>Name: <ins><%= "#{@player.name} #{@player.second_name}" %></ins></p>
+  <p>Rating points: <b><%= @player.rating %></b></p>
+  <p>Age: <b><%= @player.age %></b></p>
+  <p>Country: <b><%= @player.country %></b></p>
+  <p>Avatar: <%= image_tag(@player.user.avatar_url(:thumb)) if @player.user.avatar.present? %></p>
+</h3>

@@ -1,0 +1,21 @@
+<h2>All users <%= rand(0..100) %></h2>
+
+<table class="table table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Player</th>
+      <th>Admin</th>
+      <th>Avatar</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody id="users"><%= render @users %></tbody>
+</table>
+
+<%= will_paginate @users %>

@@ -1,0 +1,13 @@
+class Admin::ApplicationController < ActionController::Base
+  http_basic_authenticate_with name: 'admin', password: 'admin'
+
+  layout 'admin/application'
+
+  before_action :require_admin
+
+  private
+
+  def require_admin
+    redirect_to root_path unless current_user.admin?
+  end
+end

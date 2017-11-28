@@ -1,0 +1,15 @@
+<h2>Tennis players rating (ATP)</h2>
+
+<table class="table table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th>World Place</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+      <th>Rating points</th>
+    </tr>
+  </thead>
+  <% @@place = 0 %>
+  <tbody><%= render @players %></tbody>
+</table>

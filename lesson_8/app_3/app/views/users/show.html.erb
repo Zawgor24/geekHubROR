@@ -1,0 +1,7 @@
+<h2>Show info about <%= @user.name + ' ' + @user.second_name %> user</h2>
+
+<h3>
+  <p>Name: <ins><%= "#{@user.name} #{@user.second_name}" %></ins></p>
+  <p>Email: <b><%= @user.email %></b></p>
+  <p>Avatar: <%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %></p>
+</h3>

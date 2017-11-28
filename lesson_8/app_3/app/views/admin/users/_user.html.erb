@@ -1,0 +1,16 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.email %></td>
+  <td><%= "#{user.name} #{user.second_name}" %></td>
+  <td><%= link_to user.player.name, user_player_path(user, user.player) if user.player.present? %></td>
+  <td><%= user.admin? ? "#{user.name} is an admin" : "#{user.name} isn't an admin" %></td>
+  <td><%= image_tag(user.avatar_url(:thumb)) if user.avatar.present? %></td>
+  <td>
+  <td><%= link_to 'Delete', admin_user_path(user),
+                            method: :delete,
+                            remote: true,
+                            data: { confirm: 'Sure?' } %></td>
+  </td>
+  <td><%= link_to 'Show info', admin_user_path(user) %></td>
+  <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+</tr>

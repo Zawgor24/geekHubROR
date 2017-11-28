@@ -1,0 +1,33 @@
+<%= form_for @user do |f| %>
+
+  <div class="input-group">
+    <%= f.text_field :name, autofocus: true , class: 'form-control', placeholder:
+    'name' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.text_field :second_name, autofocus: true , class: 'form-control', placeholder:
+    'Second name' %>
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <%= f.email_field :email, autofocus: true , class: 'form-control', placeholder:
+    'Email' %>
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <%= f.password_field :password, autofocus: true , class: 'form-control', placeholder:
+    'Password' %>
+  </div>
+
+  <div class = 'field'>
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
