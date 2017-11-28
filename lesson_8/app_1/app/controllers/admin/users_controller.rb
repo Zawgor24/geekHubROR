@@ -14,9 +14,8 @@ class Admin::UsersController < Admin::ApplicationController
   end
 
   def destroy
+    @users = User.paginate(page: params[:page], per_page: 5)
     @user.destroy
-
-    redirect_to admin_users_path
   end
 
   private

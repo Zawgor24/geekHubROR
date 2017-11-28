@@ -4,7 +4,14 @@
   Email: <%= @user.email %><br>
   Created at: <%= @user.created_at %><br>
   <%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %><br>
-  <%= 'This uses has acces to admin' if @user.admin? %>
+  <%= 'This uses has acces to admin' if @user.admin? %><br>
+  <% if @user.admin? %>
+    <%= link_to 'Make user', admin_user_path(@user, user: { admin: false }),
+                                            method: :patch, remote: true  %>
+  <% else %>
+    <%= link_to 'Make admin', admin_user_path(@user, user: { admin: true }),
+                                            method: :patch, remote: true %>
+  <% end %>
 </h3>
 
 <%= link_to "Back", :back %>

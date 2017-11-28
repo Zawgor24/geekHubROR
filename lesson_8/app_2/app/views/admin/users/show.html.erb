@@ -6,4 +6,11 @@
     <p>Image: <%= @user.avatar.present? ? image_tag(@user.avatar_url(:thumb)) : 'Empty' %></p>
     <p><%= @user.admin? ? 'User is an admin' : "User isn't an admin" %></p>
   </h3>
+  <% if @user.admin? %>
+      <%= link_to 'Make user', admin_user_path(@user, user: { admin: false }),
+                                                method: :patch, remote: true %>
+      <% else %>
+      <%= link_to 'Make admin', admin_user_path(@user, user: { admin: true }),
+                                                method: :patch, remote: true %>
+    <% end %>
 </div>

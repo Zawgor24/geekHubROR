@@ -10,16 +10,15 @@ class Admin::UsersController < Admin::ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_users_path
+      redirect_to admin_user_path(@user)
     else
       render :edit
     end
   end
 
   def destroy
+    @users = User.paginate(page: params[:page], per_page: 5)
     @user.destroy
-
-    redirect_to admin_users_path
   end
 
   private
