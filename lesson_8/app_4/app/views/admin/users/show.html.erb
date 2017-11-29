@@ -1,0 +1,15 @@
+<h2>Show info</h2>
+
+<h3>
+  <p>Email: <%= @user.email %></p>
+  <p><%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %></p>
+  <p>
+    <% if @user.admin? %>
+      <%= link_to 'Make user', admin_user_path(@user, user: { admin: false }),
+                                              method: :patch, remote: true %>
+    <% else %>
+      <%= link_to 'Make admin', admin_user_path(@user, user: { admin: true }),
+                                              method: :patch, remote: true %>
+    <% end %>  
+  </p>
+</h3>

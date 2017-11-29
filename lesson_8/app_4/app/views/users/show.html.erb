@@ -1,0 +1,6 @@
+<h2>Show info</h2>
+
+<h3>
+  <p>Email: <%= @user.email %></p>
+  <p><%= image_tag(@user.avatar_url(:thumb)) if @user.avatar.present? %></p>
+</h3>
