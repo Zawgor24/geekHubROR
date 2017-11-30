@@ -1,0 +1,17 @@
+<div class = 'status'>  
+  <% if current_user %>
+    <%= current_user.name %> :)
+    <%= image_tag(current_user.image) %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path %>
+  <% end %>
+</div>
+<div class="text">
+  <p>If you have some problem to login via facebook, like was at our last class.
+    <br><strong>Can't Load URL: The domain of this URL isn't included in the app's domains. To be able to load this URL, add all domains and subdomains of your app to the App Domains field in your app settings.</strong><br>
+    You should go to Product setting page and open 'Facebook Login'
+    and add <strong>http://localhost:3000</strong> in to 'Valid OAuth redirect URIs' 
+    <br><%= link_to 'Read more', 'https://stackoverflow.com/a/37200021' %>
+  </p>
+</div>
