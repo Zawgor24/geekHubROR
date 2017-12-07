@@ -1,0 +1,2 @@
+class Smartphone < Ware
+end

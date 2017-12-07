@@ -1,0 +1,24 @@
+<h3>
+  Hello, this is fist task from lesson 10. <br>
+  You need to create rails app with <strong>devise and active admin</strong>,
+  plus <strong>paranoia</strong> to some models.
+</h3>
+
+<h3>
+  Paranoia - this gem extends ActiveAdmin so that batch restore and batch archive actions will be available in resource index page. Also 'All' and 'Archived' scope will be available for resource index page. 'All' scope will show non archived resources and 'Archived' scope will show deleted or archived resources.
+</h3>
+
+<%= link_to 'Go test paranoia', '/admin' , class: 'links' %>
+<br>
+<h3>
+  This part is practice at <strong>STI</strong>, here a created several models
+  and connected their to the main model <strong>Ware</strong> which has some attributes.
+  And added some functional to this model. You can also create some items etc.
+</h3>
+
+<div class="links">
+  <%= link_to 'Create laptop', new_laptop_path %>||
+  <%= link_to 'See all laptops', laptops_path %><br>
+  <%= link_to 'Show all Goods', wares_path %>
+</div>
+

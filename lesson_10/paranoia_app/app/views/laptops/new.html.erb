@@ -1,0 +1,6 @@
+<%= form_for @laptop do |f| %>
+  <p>Company name: <%= f.text_field :name %></p>
+  <p>Model: <%= f.text_field :model %></p>
+  <p>Price: <%= f.number_field :price %></p>
+  <p><%= f.submit %></p>
+<% end %>
