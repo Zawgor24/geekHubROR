@@ -2,14 +2,26 @@
 
 <table>
   <thead>
-    <tr>
+    <tr align="center">
       <th>Type</th>
       <th>Company</th>
       <th>Model</th>
       <th>Price</th>
+      <th></th>
     </tr>
   </thead>
-  <tbody><%= render @wares %></tbody>
+  <tbody>
+    <% @wares.each do |ware| %>
+      <tr align="center">
+        <td><%= ware.type %></td>
+        <td><%= ware.name %></td>
+        <td><%= ware.model %></td>
+        <td><%= ware.price %></td>
+        <td><%= link_to 'remove', '#', class: 'remove_fields' %></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
 </table>
 
 <%= link_to 'Back', root_path %>
