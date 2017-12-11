@@ -1,10 +1,11 @@
 require './lib/wit_bot/message.rb'
 
-# top-level class documentation comment
+# This class checks presence our custom intents at Wit.ai app
 class IntentRecognition
   HELLO_INTENT = 'hello_present'.freeze
+  TRASH_INTENT = 'trash_present'.freeze
 
-  INTENTS = %i[hello].freeze
+  INTENTS = %i[hello trash].freeze
 
   attr_accessor :string
 
@@ -18,6 +19,10 @@ class IntentRecognition
 
   def hello_present?
     include_string?(HELLO_INTENT)
+  end
+
+  def trash_present?
+    include_string?(TRASH_INTENT)
   end
 
   private

@@ -1,4 +1,5 @@
-# top-level class documentation comment
+# Message class - show, and create new messages from user
+# and redirect to user's messages with answears from wit.ai
 class MessagesController < ApplicationController
   def index
     @messages = current_user.messages

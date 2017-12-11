@@ -1,4 +1,4 @@
-# top-level class documentation comment
+# This class gets output params from IntentRecognition and create message
 class MessageCreator
   attr_accessor :params, :user
 

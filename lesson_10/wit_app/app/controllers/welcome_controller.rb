@@ -1,4 +1,4 @@
-# top-level class documentation comment
+# Root page
 class WelcomeController < ApplicationController
   def index; end
 end

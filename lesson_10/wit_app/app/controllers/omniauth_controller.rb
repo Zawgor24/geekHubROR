@@ -1,4 +1,4 @@
-# top-level class documentation comment
+# Omniauth class create new user session via facebook
 class OmniauthController < ApplicationController
   def create
     session[:user_id] = user.id
